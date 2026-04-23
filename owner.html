@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Owner Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Owner Dashboard</h1>
+    <nav id="navBar">
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<section>
+
+<div class="card">
+  <h2 id="propertyFormTitle">Add Property</h2>
+
+  <input id="address" placeholder="Address">
+  <input id="neighborhood" placeholder="Neighborhood">
+  <input id="sqft" type="number" placeholder="Square Feet">
+
+  <label><input type="checkbox" id="parking"> Parking</label>
+  <label><input type="checkbox" id="transport"> Public Transport</label>
+
+  <button onclick="saveProperty()">Save Property</button>
+  <button class="secondary" onclick="resetPropertyForm()">Cancel</button>
+</div>
+
+<div class="card">
+  <h2 id="workspaceFormTitle">Add Workspace</h2>
+
+  <select id="propertySelect"></select>
+
+  <input id="type" placeholder="Type">
+  <input id="seats" type="number" placeholder="Seats">
+
+  <label><input type="checkbox" id="smoking"> Smoking</label>
+
+  <input id="date" type="date">
+
+  <select id="lease">
+    <option value="day">Day</option>
+    <option value="week">Week</option>
+    <option value="month">Month</option>
+  </select>
+
+  <input id="price" type="number" placeholder="Price">
+
+  <button onclick="saveWorkspace()">Save Workspace</button>
+  <button class="secondary" onclick="resetWorkspaceForm()">Cancel</button>
+</div>
+
+<div id="results"></div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
